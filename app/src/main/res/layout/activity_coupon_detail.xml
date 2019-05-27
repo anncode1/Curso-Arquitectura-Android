@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false">
+
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTitleDetail"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="@+id/guideline5"
+            android:layout_marginStart="24dp" android:layout_marginLeft="24dp"
+            app:layout_constraintHorizontal_bias="0.0"/>
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgCouponDetail"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            tools:srcCompat="@tools:sample/avatars[14]"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline5"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline9" app:layout_constraintVertical_bias="0.166"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvDescriptionShortDetail"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitleDetail" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline5" android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            app:layout_constraintHorizontal_bias="0.0"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:id="@+id/tvDateDetail"
+            android:background="@drawable/rounded_corner_deadline"
+            android:textColor="#d11940" android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/tvCategoryDetail"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="24dp"
+            app:layout_constraintStart_toStartOf="@+id/guideline5" android:layout_marginLeft="24dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:padding="7dp" android:textSize="12sp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline9"/>
+
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvCategoryDetail" android:background="@drawable/rounded_corner_category"
+            android:textColor="#0071e7" android:textStyle="bold"
+            android:gravity="left|center_vertical"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescriptionShortDetail" android:layout_marginStart="24dp"
+            app:layout_constraintStart_toStartOf="@+id/guideline5" android:layout_marginLeft="24dp"
+            android:layout_marginEnd="24dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginRight="24dp" android:layout_marginTop="4dp"
+            app:layout_constraintHorizontal_bias="0.0" android:padding="7dp" android:textSize="12sp"/>
+    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:id="@+id/guideline4" app:layout_constraintGuide_begin="-384dp"
+                                          android:orientation="vertical"/>
+    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:id="@+id/guideline5"
+                                          android:orientation="vertical"
+                                          app:layout_constraintGuide_percent="0.23"/>
+    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:id="@+id/guideline9"
+                                          android:orientation="horizontal"
+                                          app:layout_constraintGuide_percent="0.21"/>
+    <ImageView
+            android:layout_width="386dp"
+            android:layout_height="145dp" tools:srcCompat="@tools:sample/backgrounds/scenic[1]"
+            android:id="@+id/imgHeaderDetail" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline4" app:layout_constraintHorizontal_bias="0.384"
+            android:layout_marginTop="16dp" app:layout_constraintTop_toTopOf="@+id/guideline9"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"/>
+
+    <android.support.v7.widget.CardView
+            android:layout_width="375dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="15dp" app:layout_constraintTop_toBottomOf="@+id/imgHeaderDetail"
+            app:layout_constraintHorizontal_bias="0.529" android:id="@+id/cardView">
+
+
+        <android.support.constraint.ConstraintLayout android:layout_width="match_parent"
+                                                     android:layout_height="wrap_content"
+                                                     android:layout_marginBottom="8dp"
+                                                     app:layout_constraintBottom_toBottomOf="parent"
+                                                     android:paddingBottom="15dp"
+        >
+
+            <TextView
+                    android:text="Detalles de la oferta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvHeadDetail"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textColor="#000000" android:layout_marginEnd="220dp" android:layout_marginRight="220dp"
+                    android:layout_marginTop="24dp" android:layout_marginStart="8dp"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+                    app:layout_constraintHorizontal_bias="0.363"/>
+
+            <TextView
+                    android:text="Description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvDescriptionDetail"
+                    android:textSize="14sp"
+
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="20dp" app:layout_constraintTop_toBottomOf="@+id/tvHeadDetail"/>
+
+
+            <TextView
+                    android:text="Oferta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvOffertDetail"
+                    android:textSize="14sp"
+
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="20dp" app:layout_constraintTop_toBottomOf="@+id/tvDescriptionDetail"/>
+
+            <TextView
+                    android:text="Website"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvWebsiteDetail"
+                    android:textSize="14sp"
+
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="20dp" app:layout_constraintTop_toBottomOf="@+id/tvOffertDetail"/>
+
+            <TextView
+                    android:text="Valido hasta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvDateEndDetail"
+                    android:textSize="14sp"
+
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="20dp" app:layout_constraintTop_toBottomOf="@+id/tvWebsiteDetail"
+                    android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"/>
+            <TextView
+                    android:text="TextView"
+                    android:id="@+id/tvDescriptionDetailData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp" android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvDescriptionDetail" android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="0.146"
+                    android:layout_marginTop="20dp" app:layout_constraintTop_toBottomOf="@+id/tvHeadDetail"
+                    android:textStyle="bold"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvOffertDetailData"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp" app:layout_constraintStart_toEndOf="@+id/tvOffertDetail"
+                    android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+                    app:layout_constraintHorizontal_bias="0.253" android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDescriptionDetailData" android:textStyle="bold"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvDateEndData"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    app:layout_constraintStart_toEndOf="@+id/tvDateEndDetail" android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintHorizontal_bias="0.117" android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvWebsiteDetailData"
+                    app:layout_constraintVertical_bias="0.703" android:textStyle="bold"/>
+            <TextView
+                    android:text="TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvWebsiteDetailData"
+                    app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    app:layout_constraintStart_toEndOf="@+id/tvWebsiteDetail" android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="0.219"
+                    android:layout_marginTop="20dp" app:layout_constraintTop_toBottomOf="@+id/tvOffertDetailData"
+                    android:textStyle="bold"/>
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" app:srcCompat="@android:drawable/stat_notify_chat"
+                    android:id="@+id/imageView3" android:background="#2CBAF1" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="16dp" android:layout_marginRight="16dp"
+                    app:layout_constraintStart_toEndOf="@+id/tvDescriptionDetailData" android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="0.993"
+                    android:layout_marginTop="12dp" app:layout_constraintTop_toBottomOf="@+id/tvHeadDetail"/>
+            <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="29dp" app:srcCompat="@android:drawable/ic_menu_compass"
+                    android:id="@+id/imageView4"
+                    android:background="#2CBAF1" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="16dp" android:layout_marginRight="16dp"
+                    android:layout_marginStart="8dp" android:layout_marginLeft="8dp"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/tvOffertDetailData" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView3"/>
+            <ImageView
+                    android:layout_width="23dp"
+                    android:layout_height="28dp" app:srcCompat="@android:drawable/ic_menu_edit"
+                    android:id="@+id/imageView6" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="16dp" android:layout_marginRight="16dp" android:background="#2CBAF1"
+                    app:layout_constraintStart_toEndOf="@+id/tvWebsiteDetailData" android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="0.993"
+                    android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/imageView4"/>
+            <ImageView
+                    android:layout_width="23dp"
+                    android:layout_height="27dp" app:srcCompat="@android:drawable/ic_menu_month"
+                    android:id="@+id/imageView7" android:background="#2CBAF1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="16dp" android:layout_marginRight="16dp"
+                    app:layout_constraintStart_toEndOf="@+id/tvDateEndData" android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="0.993"
+                    android:layout_marginTop="12dp" app:layout_constraintTop_toBottomOf="@+id/imageView6"/>
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+    <Button
+            android:text="Obtén esta Oferta"
+            android:layout_width="389dp"
+            android:layout_height="52dp"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/btnOpenOffer" android:layout_marginTop="36dp"
+            app:layout_constraintTop_toBottomOf="@+id/cardView" app:layout_constraintHorizontal_bias="0.498"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            android:theme="@style/btnOpenOffer"
+    />
+
+</android.support.constraint.ConstraintLayout>
+
+
+

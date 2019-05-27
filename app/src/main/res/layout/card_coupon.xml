@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+    <android.support.v7.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/cvCoupon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            android:layout_marginBottom="15dp"
+            app:cardElevation="0dp"
+
+    >
+
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:clipToPadding="false">
+
+        <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvTitle"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="@+id/guideline5"
+                android:layout_marginStart="24dp" android:layout_marginLeft="24dp"
+                app:layout_constraintHorizontal_bias="0.0"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgCoupon"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                tools:srcCompat="@tools:sample/avatars[14]"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                app:layout_constraintHorizontal_bias="0.4" android:layout_marginLeft="24dp"
+                android:layout_marginStart="24dp"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/tvDescriptionShort"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline5" android:layout_marginLeft="24dp"
+                android:layout_marginStart="24dp"
+                app:layout_constraintHorizontal_bias="0.0"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:id="@+id/tvDate"
+                android:background="@drawable/rounded_corner_deadline"
+                android:textColor="#d11940" android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@+id/tvCategory"
+                android:layout_marginBottom="24dp" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintVertical_bias="1.0" android:layout_marginStart="24dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline5" android:layout_marginLeft="24dp"
+                app:layout_constraintHorizontal_bias="0.0"
+                android:padding="7dp" android:textSize="12sp"/>
+
+        <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvCategory" android:background="@drawable/rounded_corner_category"
+                android:textColor="#0071e7" android:textStyle="bold"
+                android:gravity="left|center_vertical"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescriptionShort" android:layout_marginStart="24dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline5" android:layout_marginLeft="24dp"
+                android:layout_marginEnd="24dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginRight="24dp" android:layout_marginTop="4dp"
+                app:layout_constraintHorizontal_bias="0.0" android:padding="7dp" android:textSize="12sp"/>
+        <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                              android:id="@+id/guideline4" app:layout_constraintGuide_begin="10dp"
+                                              android:orientation="vertical"/>
+        <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                              android:id="@+id/guideline5" app:layout_constraintGuide_begin="112dp"
+                                              android:orientation="vertical"/>
+        <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                              android:id="@+id/guideline6" app:layout_constraintGuide_begin="10dp"
+                                              android:orientation="vertical"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.v7.widget.CardView>
+
