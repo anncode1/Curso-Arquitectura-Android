@@ -8,18 +8,31 @@ import android.util.Log
 import com.anncode.offersandcoupons.model.Coupon
 import com.anncode.offersandcoupons.R
 import com.anncode.offersandcoupons.model.ApiAdapter
+import com.anncode.offersandcoupons.presenter.CouponPresenter
+import com.anncode.offersandcoupons.presenter.CouponPresenterImpl
 import com.google.gson.JsonElement
 import com.google.gson.JsonObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), CouponView {
+    override fun showCoupons(coupons: ArrayList<Coupon>) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun getCoupons() {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    private var couponPresenter: CouponPresenter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         supportActionBar?.hide()
+
+        //couponPresenter = CouponPresenterImpl()
 
         //VIEW
         val rvCoupons: RecyclerView = findViewById(R.id.rvCoupons) //UI
