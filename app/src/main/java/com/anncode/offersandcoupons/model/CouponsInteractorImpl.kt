@@ -7,7 +7,7 @@ class CouponsInteractorImpl(var couponPresenter: CouponPresenter): CouponsIntera
     private var couponRepository: CouponRepository = CouponRepositoryImpl(couponPresenter)
 
     override fun getCouponsAPI() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        couponRepository.getCoupunsAPI()
     }
 
 }
