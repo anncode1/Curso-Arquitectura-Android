@@ -1,4 +1,4 @@
-package com.anncode.offersandcoupons
+package com.anncode.offersandcoupons.model
 
 import com.google.gson.JsonObject
 import java.lang.Exception
