@@ -1,7 +1,7 @@
 package com.anncode.offersandcoupons.view
 
 import android.content.Intent
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -12,7 +12,7 @@ import com.anncode.offersandcoupons.model.Coupon
 import com.anncode.offersandcoupons.R
 import com.squareup.picasso.Picasso
 
-class RecyclerCouponsAdapter(var coupons : ArrayList<Coupon>?, var resource: Int) : RecyclerView.Adapter<RecyclerCouponsAdapter.CardCouponHolder>() {
+class RecyclerCouponsAdapter(var coupons : ArrayList<Coupon>?, var resource: Int) : androidx.recyclerview.widget.RecyclerView.Adapter<RecyclerCouponsAdapter.CardCouponHolder>() {
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): CardCouponHolder {
         var view: View = LayoutInflater.from(p0!!.context).inflate(resource, p0, false)
@@ -28,7 +28,7 @@ class RecyclerCouponsAdapter(var coupons : ArrayList<Coupon>?, var resource: Int
         p0.setDataCard(coupon)
     }
 
-    class CardCouponHolder(v: View) : RecyclerView.ViewHolder(v), View.OnClickListener {
+    class CardCouponHolder(v: View) : androidx.recyclerview.widget.RecyclerView.ViewHolder(v), View.OnClickListener {
 
         private var coupon: Coupon? = null
         private var imgCoupon: ImageView = v.findViewById(R.id.imgCoupon)

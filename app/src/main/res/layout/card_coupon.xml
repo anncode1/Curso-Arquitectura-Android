@@ -3,7 +3,7 @@
 
 
 
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
             xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/cvCoupon"
@@ -16,7 +16,7 @@
     >
 
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:clipToPadding="false">
 
@@ -83,18 +83,18 @@
                 android:layout_marginEnd="24dp" app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginRight="24dp" android:layout_marginTop="4dp"
                 app:layout_constraintHorizontal_bias="0.0" android:padding="7dp" android:textSize="12sp"/>
-        <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                              android:id="@+id/guideline4" app:layout_constraintGuide_begin="10dp"
-                                              android:orientation="vertical"/>
-        <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                              android:id="@+id/guideline5" app:layout_constraintGuide_begin="112dp"
-                                              android:orientation="vertical"/>
-        <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                              android:id="@+id/guideline6" app:layout_constraintGuide_begin="10dp"
-                                              android:orientation="vertical"/>
+        <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                                    android:id="@+id/guideline4" app:layout_constraintGuide_begin="10dp"
+                                                    android:orientation="vertical"/>
+        <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                                    android:id="@+id/guideline5" app:layout_constraintGuide_begin="112dp"
+                                                    android:orientation="vertical"/>
+        <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                                    android:id="@+id/guideline6" app:layout_constraintGuide_begin="10dp"
+                                                    android:orientation="vertical"/>
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-</android.support.v7.widget.CardView>
+</androidx.cardview.widget.CardView>
 
