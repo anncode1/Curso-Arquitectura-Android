@@ -8,15 +8,25 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.databinding.DataBindingUtil
+import androidx.databinding.ViewDataBinding
 import com.anncode.offersandcoupons.model.Coupon
 import com.anncode.offersandcoupons.R
+import com.anncode.offersandcoupons.viewmodel.CouponViewModel
 import com.squareup.picasso.Picasso
 
-class RecyclerCouponsAdapter(var coupons : ArrayList<Coupon>?, var resource: Int) : androidx.recyclerview.widget.RecyclerView.Adapter<RecyclerCouponsAdapter.CardCouponHolder>() {
+class RecyclerCouponsAdapter( var couponViewModel: CouponViewModel ,var resource: Int) : androidx.recyclerview.widget.RecyclerView.Adapter<RecyclerCouponsAdapter.CardCouponHolder>() {
+
+    var coupons: List<Coupon>? = null
+
+    fun setCounponsList(coupons: List<Coupon>?){
+        this.coupons= coupons
+    }
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): CardCouponHolder {
-        var view: View = LayoutInflater.from(p0!!.context).inflate(resource, p0, false)
-        return CardCouponHolder(view)
+        var layoutInflater: LayoutInflater = LayoutInflater.from(p0.context)
+        var binding:  ViewDataBinding = DataBindingUtil.inflate(layoutInflater, p1, p0, false)
+        return CardCouponHolder(binding)
     }
 
     override fun getItemCount(): Int {

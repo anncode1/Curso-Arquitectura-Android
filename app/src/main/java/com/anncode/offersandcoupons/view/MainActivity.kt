@@ -42,8 +42,9 @@ class MainActivity : AppCompatActivity(){
         couponViewModel?.callCoupons()
         //getCoupons - Lista de cupones
         couponViewModel?.getCoupons()?.observe(this, Observer {
-                coupon: List<Coupon> ->
-            Log.w("COUPON", coupon.get(0).title)
+                coupons: List<Coupon> ->
+            Log.w("COUPON", coupons.get(0).title)
+            couponViewModel?.setCouponsInRecyclerAdapter(coupons)
         })
     }
 
