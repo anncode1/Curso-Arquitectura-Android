@@ -1,6 +1,8 @@
 package com.anncode.offersandcoupons.viewmodel
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.anncode.offersandcoupons.model.Coupon
 import com.anncode.offersandcoupons.model.CouponObservable
 
 class CouponViewModel: ViewModel() {
@@ -9,5 +11,9 @@ class CouponViewModel: ViewModel() {
 
     fun callCoupons(){
         couponObservable.callCoupons()
+    }
+
+    fun getCoupons() : MutableLiveData<List<Coupon>> {
+        return couponObservable.getCoupons()
     }
 }

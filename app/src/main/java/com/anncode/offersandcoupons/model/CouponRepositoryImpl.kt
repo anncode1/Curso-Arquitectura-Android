@@ -11,10 +11,13 @@ import retrofit2.Response
 class CouponRepositoryImpl: CouponRepository {
 
     private var coupons = MutableLiveData<List<Coupon>>()
+    //Subject MutableLiveData
+    //Observers List Coupon
+    //Change List Coupon - MutableLiveData
+    //observe
 
-
-    override fun getCoupunsAPI() {
-
+    override fun getCoupuns(): MutableLiveData<List<Coupon>> {
+        return coupons
     }
 
 
