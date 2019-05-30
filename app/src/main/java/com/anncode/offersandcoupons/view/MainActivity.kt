@@ -20,6 +20,8 @@ class MainActivity : AppCompatActivity(){
         rvCoupons = findViewById(R.id.rvCoupons) //UI
         rvCoupons?.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(this)
 
+        //CallCoupons
+        //getCoupons - Lista de cupones
 
     }
 

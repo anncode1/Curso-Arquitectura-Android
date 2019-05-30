@@ -1,6 +1,7 @@
 package com.anncode.offersandcoupons.model
 
 import android.util.Log
+import androidx.lifecycle.MutableLiveData
 import com.google.gson.JsonElement
 import com.google.gson.JsonObject
 import retrofit2.Call
@@ -9,11 +10,18 @@ import retrofit2.Response
 
 class CouponRepositoryImpl: CouponRepository {
 
+    private var coupons = MutableLiveData<List<Coupon>>()
+
+
+    override fun getCoupunsAPI() {
+
+    }
+
 
     //TODA LA LÓGICA DE CONEXIÓN
-    override fun getCoupunsAPI() {
+    override fun callCoupunsAPI() {
         //CONTROLLER
-        var coupons: ArrayList<Coupon>? = ArrayList<Coupon>()
+        var couponsList: ArrayList<Coupon>? = ArrayList<Coupon>()
         val apiAdapter = ApiAdapter()
         val apiService = apiAdapter.getClientService()
         val call = apiService.getCoupons()
@@ -29,9 +37,11 @@ class CouponRepositoryImpl: CouponRepository {
                 offersJsonArray?.forEach { jsonElement: JsonElement ->
                     var jsonObject = jsonElement.asJsonObject
                     var coupon = Coupon(jsonObject)
-                    coupons?.add(coupon)
+                    couponsList?.add(coupon)
                 }
                 //VIEW
+
+                coupons.value = couponsList
 
             }
 
