@@ -29,4 +29,10 @@ class CouponViewModel: ViewModel() {
         recyclerCouponsAdapter = RecyclerCouponsAdapter(this, R.layout.card_coupon)
         return recyclerCouponsAdapter
     }
+
+    fun getCoupunAt(position: Int): Coupon?{
+        var coupons: List<Coupon>? = couponObservable.getCoupons().value
+        return coupons?.get(position)
+    }
+
 }

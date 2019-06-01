@@ -10,6 +10,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
+import com.anncode.offersandcoupons.BR
 import com.anncode.offersandcoupons.model.Coupon
 import com.anncode.offersandcoupons.R
 import com.anncode.offersandcoupons.viewmodel.CouponViewModel
@@ -34,41 +35,31 @@ class RecyclerCouponsAdapter( var couponViewModel: CouponViewModel ,var resource
     }
 
     override fun onBindViewHolder(p0: CardCouponHolder, p1: Int) {
-        var coupon = coupons?.get(p1)
-        p0.setDataCard(coupon)
+        p0.setDataCard(couponViewModel, p1)
     }
 
-    class CardCouponHolder(v: View) : androidx.recyclerview.widget.RecyclerView.ViewHolder(v), View.OnClickListener {
+    override fun getItemViewType(position: Int): Int {
+        return getLayoutIdForPosition(position)
+    }
 
-        private var coupon: Coupon? = null
-        private var imgCoupon: ImageView = v.findViewById(R.id.imgCoupon)
-        private var tvTitle: TextView = v.findViewById(R.id.tvTitle)
-        private var tvDescriptionShort: TextView = v.findViewById(R.id.tvDescriptionShort)
-        private var tvCategory: TextView = v.findViewById(R.id.tvCategory)
-        private var tvDate: TextView = v.findViewById(R.id.tvDate)
+    fun getLayoutIdForPosition(position: Int): Int{
+        return resource
+    }
+
+    class CardCouponHolder(binding: ViewDataBinding) : RecyclerView.ViewHolder(binding.root) {
+
+        private var binding: ViewDataBinding? = null
 
         init {
-            v.setOnClickListener(this)
+            this.binding = binding
         }
 
-        fun setDataCard(coupon: Coupon?){
-            this.coupon = coupon
-            Picasso.get().load(coupon?.image_url).resize(520, 520).centerCrop().into(imgCoupon)
-            tvTitle.setText(coupon?.title)
-            tvDescriptionShort.setText(coupon?.descriptionShort)
-            tvCategory.setText(coupon?.category)
-            tvDate.setText(coupon?.endDate)
-
+        fun setDataCard(couponViewModel: CouponViewModel, position: Int){
+            binding?.setVariable(BR.model, couponViewModel)
+            binding?.setVariable(BR.position, position)
+            binding?.executePendingBindings()
         }
 
-        override fun onClick(v: View) {
-            Log.i("CLICK Coupon: ", coupon?.title)
-            val context = v.context
-            val showPhotoIntent = Intent(context, CouponDetailActivity::class.java)
-            showPhotoIntent.putExtra("COUPON", coupon)
-            context.startActivity(showPhotoIntent)
-
-        }
 
     }
 
